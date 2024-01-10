@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &348794646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348794647}
+  - component: {fileID: 348794648}
+  m_Layer: 0
+  m_Name: Turret Rotation Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &348794647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348794646}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.23, y: -1.0799999, z: 0.08681281}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1856069446}
+  m_Father: {fileID: 1484174044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &348794648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348794646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b134a9c5fed1c0b40ad988631c8d54f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!1 &707752391
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +180,7 @@ GameObject:
   - component: {fileID: 707752392}
   - component: {fileID: 707752393}
   m_Layer: 0
-  m_Name: tanks_tankTracks1
+  m_Name: tanks_tracks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,8 +535,8 @@ Transform:
   m_Children:
   - {fileID: 1661084038}
   - {fileID: 707752392}
-  - {fileID: 1856069446}
   - {fileID: 1969015800}
+  - {fileID: 348794647}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1484174045
@@ -520,7 +566,7 @@ GameObject:
   - component: {fileID: 1661084037}
   - component: {fileID: 1661084039}
   m_Layer: 0
-  m_Name: tanks_tankDesert_body1
+  m_Name: tanks_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -649,7 +695,7 @@ GameObject:
   - component: {fileID: 1856069446}
   - component: {fileID: 1856069447}
   m_Layer: 0
-  m_Name: tanks_turret1
+  m_Name: tanks_turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -664,11 +710,11 @@ Transform:
   m_GameObject: {fileID: 1856069445}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.820513, y: -1.1111112, z: 0}
+  m_LocalPosition: {x: 0.40948725, y: -0.03111124, z: -0.08681281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1484174044}
+  m_Father: {fileID: 348794647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1856069447
 SpriteRenderer:
@@ -732,7 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969015800}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MissileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

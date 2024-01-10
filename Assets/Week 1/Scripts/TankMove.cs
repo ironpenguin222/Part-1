@@ -5,7 +5,9 @@ using UnityEngine.UIElements;
 
 public class TankMove : MonoBehaviour
 {
-    public float speed = 5;
+    public float speed = 4f;
+    public GameObject missilePrefab;
+    public Transform spawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,12 @@ public class TankMove : MonoBehaviour
         float direction = Input.GetAxis("Horizontal");
        
         transform.Translate(direction * speed * Time.deltaTime, 0, 0);
-        
+
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(missilePrefab, spawn.position, spawn.rotation);
+        }
+        }
     }
-}
 
